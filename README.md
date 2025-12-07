@@ -56,33 +56,8 @@ Kubespray for on-prem clusters.
 Terraform templates for provisioning cloud infrastructure.
 
 🏗 System Architecture
-Below is the canonical architecture diagram from project design discussions.
 
-ASCII Architecture Diagram
-            ┌─────────────────────────┐
-            │       Airflow UI        │
-            │  (Scheduler + Webserver)│
-            └──────────┬──────────────┘
-                       │
-                 Triggers DAGs
-                       │
-            ┌──────────▼───────────┐
-            │   Redis / RabbitMQ   │   ← central message broker
-            └───────────┬──────────┘
-                        │
-       ┌────────────────┼─────────────────┐
-       │                │                 │
-┌──────▼───────┐  ┌─────▼────────┐  ┌─────▼────────┐
-│ClientWorker1 │  │ClientWorker2 │  │ClientWorker3 │
-│(Scrapy siteA)│  │(Scrapy siteB)│  │(Scrapy siteC)│
-└──────┬───────┘  └─────┬────────┘  └─────┬────────┘
-       │                │                 │
-       ▼                ▼                 ▼
-  ┌─────────────────────────────────────────────┐
-  │       FastAPI Selenium Service (Server)     │
-  │ Handles site automation, browser sessions,  │
-  │ request routing, and CAPTCHA handling       │
-  └─────────────────────────────────────────────┘
+![System Architecture Diagram](./images/architecture_diagram.png)
 
 🌐 Supported Target Categories
 🔹E-commerce & marketplace platforms
