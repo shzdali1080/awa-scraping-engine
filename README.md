@@ -7,63 +7,63 @@ AWA Scraping is an enterprise-grade, cloud-native, distributed scraping platform
 The platform supports multi-site, large-scale extraction pipelines with stateful browser automation, retry mechanisms, live progress tracking, resumable crawls, slicing of massive datasets, and multi-format export options including databases, cloud storage, APIs, and BI tools. It has been validated against multiple real-world commercial websites across e-commerce, grocery, transport, and marketplaces — sites that require robust automation to bypass dynamic rendering, session binding, anti-bot systems, and rate-limiting heuristics.
 🧩 Core Features
 
-✔ Distributed, Scalable Architecture
-Airflow-managed DAGs orchestrate scraping and automation workflows.
-Redis/RabbitMQ broker distributes tasks to multiple Scrapy workers.
-Supports horizontal scaling of workers and browser automation servers.
-Built for thousands to millions of items across multiple domains.
+✔ Distributed, Scalable Architecture <br>
+Airflow-managed DAGs orchestrate scraping and automation workflows. <br>
+Redis/RabbitMQ broker distributes tasks to multiple Scrapy workers. <br>
+Supports horizontal scaling of workers and browser automation servers. <br>
+Built for thousands to millions of items across multiple domains. <br>
 
-✔ Hybrid Engine (Scrapy + SeleniumBase)
-Scrapy workers perform fast, lightweight crawl tasks
-FastAPI SeleniumBase Server handles JavaScript-heavy flows, multi-step navigation, DOM extraction, login flows, infinite scroll, and advanced automation. Workers request dynamic content from the Seleniumbase server via an REST API.
+✔ Hybrid Engine (Scrapy + SeleniumBase) <br>
+Scrapy workers perform fast, lightweight crawl tasks. <br>
+FastAPI SeleniumBase Server handles JavaScript-heavy flows, multi-step navigation, DOM extraction, login flows, infinite scroll, and advanced automation. Workers request dynamic content from the Seleniumbase server via an REST API. <br>
 
-✔ Browser Pooling & Session Reuse
-SeleniumBase browsers initialized in pools stay warm for fast reuse.
-Smart lifecycle management (restart after N tasks, per-site policies).
-Auto-recovering browsers reduce failure rates on JS-heavy websites.
+✔ Browser Pooling & Session Reuse <br>
+SeleniumBase browsers initialized in pools stay warm for fast reuse. <br>
+Smart lifecycle management (restart after N tasks, per-site policies). <br>
+Auto-recovering browsers reduce failure rates on JS-heavy websites. <br>
 
-✔ Proxy & Anti-Bot Handling
-Integrated rotating-proxy support (residential/datacenter).
-Per-domain routing rules, cooldown logic, IP health checks.
-Request fingerprint randomization, User-Agent & header rotation, Auto-detector for blocked/banned pages.
-Designed for Cloudflare/Incapsula/Akamai-protected websites.
-Optional 2Captcha integration
+✔ Proxy & Anti-Bot Handling <br>
+Integrated rotating-proxy support (residential/datacenter). <br>
+Per-domain routing rules, cooldown logic, IP health checks. <br>
+Request fingerprint randomization, User-Agent & header rotation, Auto-detector for blocked/banned pages. <br>
+Designed for Cloudflare/Incapsula/Akamai-protected websites. <br>
+Optional 2Captcha integration <br>
 
-✔ Resumable, Fault-Tolerant Scraping
-Per-task checkpoints stored in Redis/Postgres.
-DAG-level retries + worker-level retries.
-Automatic requeueing of failed batches and progress tracking.
+✔ Resumable, Fault-Tolerant Scraping <br>
+Per-task checkpoints stored in Redis/Postgres. <br>
+DAG-level retries + worker-level retries. <br>
+Automatic requeueing of failed batches and progress tracking. <br>
 
-✔ Multi-Format Export System
-Export pipeline supports:
-CSV, JSON, Parquet
-Postgres / MySQL
-S3 / MinIO / GCS
-REST callback APIs
-Google Sheets (optional adapter)
-BI dashboard ingestion endpoints (Metabase / Superset / PowerBI pipelines)
+✔ Multi-Format Export System <br>
+Export pipeline supports: <br>
+CSV, JSON, Parquet <br>
+Postgres / MySQL <br>
+S3 / MinIO / GCS <br>
+REST callback APIs <br>
+Google Sheets (optional adapter) <br>
+BI dashboard ingestion endpoints (Metabase / Superset / PowerBI pipelines) <br>
 
-✔ CI/CD Integrated
-GitHub Actions for linting, dry-run tests, environment builds.
-Automated container image versioning.
-Supports deployment to Kubernetes cluster via Helm.
-Optional environment provisioning via Terraform
+✔ CI/CD Integrated <br>
+GitHub Actions for linting, dry-run tests, environment builds. <br>
+Automated container image versioning. <br>
+Supports deployment to Kubernetes cluster via Helm. <br>
+Optional environment provisioning via Terraform <br>
 
-✔ Cloud-Native Deployment
-Fully containerized.
-Kubernetes support for all services (workers, Selenium server, Airflow, broker)
-Kubespray for on-prem clusters.
-Terraform templates for provisioning cloud infrastructure.
+✔ Cloud-Native Deployment <br>
+Fully containerized. <br>
+Kubernetes support for all services (workers, Selenium server, Airflow, broker) <br>
+Kubespray for on-prem clusters. <br>
+Terraform templates for provisioning cloud infrastructure. <br>
 
-🏗 System Architecture
+🏗 System Architecture <br>
 
-![System Architecture Diagram](./images/architecture_diagram.png)
+![System Architecture Diagram](./images/architecture.png)
 
-🌐 Supported Target Categories
-🔹E-commerce & marketplace platforms
-🔹Grocery delivery & hyperlocal stores
-🔹Automotive listing directories
-🔹Price-comparison and catalog aggregation sites
+🌐 Supported Target Categories <br>
+🔹E-commerce & marketplace platforms <br>
+🔹Grocery delivery & hyperlocal stores <br>
+🔹Automotive listing directories <br>
+🔹Price-comparison and catalog aggregation sites <br>
 
 💲 Pricing & Licensing Models
 Below is a suggested freelance-friendly pricing structure with man-hours:
