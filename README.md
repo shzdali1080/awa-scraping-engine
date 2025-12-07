@@ -65,34 +65,7 @@ Terraform templates for provisioning cloud infrastructure. <br>
 🔹Automotive listing directories <br>
 🔹Price-comparison and catalog aggregation sites <br>
 
-💲 Pricing & Licensing Models
-Below is a suggested freelance-friendly pricing structure with man-hours:
-
-1. Full Purchase License (One-Time Fee)
-Includes full delivery of source code, documentation, deployment scripts.
-Recommended price range
-$3,500 – $9,000+ (depending on modules included)
-
-Estimated man-hours
-75 – 180 hours
-Ideal for agencies or enterprises wanting full control.
-
-2. SaaS Subscription Model
-You host + maintain the service.
-
-Suggested pricing
-$99–$299/month (single site)
-$299–$799/month (multi-site scraping)
-$1,500+/month (enterprise + support)
-
-Includes:
-Managed hosting
-Monitoring
-Scaling
-Updates
-Support
-
-3. Hybrid Model
-A lower one-time customization fee + monthly operational fee.
-Complex multi-step or authenticated flows
-Cloudflare/Akamai-protected domains
+💲 Pricing <br>
+1. Full Purchase License (One-Time Fee) <br>
+Includes full delivery of source code, documentation, deployment scripts. <br>
+$4,999 <br>
